@@ -1,0 +1,202 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(44, 148, 221);
+  overflow: hidden; /* Opcional: previene el desplazamiento de la página */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+} 
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#NamenUsername {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 8%;
+  width: 100%;
+}
+
+#Links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 8%;
+  width: 100%;
+  padding-left: 9%;
+}
+
+.Links{
+  margin-right: 2%;
+  font: 1em 'Comic Sans MS';
+  outline: none;
+}
+
+.Controls{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 44.75%;
+  height: 100%;
+  /*background-color: aqua;*/
+}
+
+.Register{
+  position: absolute;
+  right: calc((100% - 59.75%) / 2);
+  top: calc((100% - 80%) / 3);
+  width: 59.75%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+}
+
+.FotoFondo{
+  width: 58vw;
+  height: 100vh;
+  position: absolute;
+  border: none;
+  top: -0.4px;
+  left: -0.4px;
+  background-image: url('./assets/SignUpFondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+#MyImage{
+  width: 32%;
+  height: 27%;
+  position: relative;
+  left: 25%;
+  margin-left: 2%;
+  margin-bottom: 7%;
+}
+
+#CreateAccount{
+  position: relative;
+  right: 8.5%;
+  margin: 2%;
+  font: 2em 'Comic Sans MS';
+}
+
+#Name{
+  margin-right: 7%;
+}
+
+.NamenUsername{
+  height: 62.5%;
+  width: 38%;
+  position: relative;
+  right: 3%;
+  border-radius: 6px;
+  outline: none;
+  border: 2px solid #00000000;
+  background-color: #7CB5DD;
+  color: #D1E9F9;
+  padding-left: 2%;
+  font: 1em 'Comic Sans MS';
+  margin-bottom: 6%;
+  padding-bottom: 2%;
+}
+
+.NamenUsername:focus{
+  border: 2px solid #164C71;
+}
+
+.NamenUsername::placeholder{
+  color: #D1E9F9;
+  font: 1em 'Comic Sans MS';
+}
+
+.TEXTS{
+  height: 5%;
+  width: 85.5%;
+  position: relative;
+  right: 3%;
+  border-radius: 6px;
+  outline: none;
+  border: 2px solid #00000000;
+  background-color: #7CB5DD;
+  color: #D1E9F9;
+  padding-left: 2%;
+  font: 1em 'Comic Sans MS';
+  margin-bottom: 6%;
+  padding-bottom: 2%;
+}
+
+.TEXTS:focus{
+  border: 2px solid #164C71;
+}
+
+.TEXTS::placeholder{
+  color: #D1E9F9;
+  font: 1em 'Comic Sans MS';
+}
+
+#OjitoEscondido{
+  background-image: url('./assets/OjitoEscondido.png');
+  height: 80%;
+  width: 5%;
+}
+
+#SignUp{
+  height: 7%;
+  width: 88%;
+  position: relative;
+  right: 3%;
+  border-radius: 6px;
+  border: none;
+  background-color: #59BBFF;
+  color: #D1E9F9;
+  font: 1em 'Comic Sans MS';
+  margin-bottom: 6%;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  cursor: pointer;
+}
