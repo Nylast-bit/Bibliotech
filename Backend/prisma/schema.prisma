@@ -3,12 +3,73 @@
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
+// schema.prisma
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
+
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("postgresql://postgre:palo1234@localhost:5432/DB_BIBLIOTECH")
+}
+
+model Libro {
+  ID_LIBRO      Int      @id @default(autoincrement())
+  ISBN   int   @unique
+  TITULO    String
+  AUTOR   String 
+  EDITORIAL String
+  YEAR_EDICION int
+  GENERO String
+  CALIFICACION Decimal
+  FECHA_CREACION DateTime @default(now())
+}
+
+model Ejemplar {
+  NUM_EJEMPLAR int @id @default(autoincrement())
+  FECHA_ADQUISICION DateTime @default(now())
+  UBICACION_LIBRERIA String
+  PRECIO Decimal
+  ESTADO String
+  TIPO_TAPA String
+  ID_LIBRO Libro @relation(fields: [ID_LIBRO], references: [ID_LIBRO])
+  ID_LIBRO int @unique
+}
+
+model Usuario{
+  ID_USUARIO int @id @default(autoincrement())
+  USUARIO String
+  PASSWORD_USUARIO String
+  CORREO_ELECTRONICO String
+  TIPO_USUARIO String
+  FECHA_CREACION DateTime @default(now())
+}
+
+model Ventas{
+  ID_VENTAS int @id @default(autoincrement())
+  CANTIDAD_LIBROS INT 
+  FECHA_HORA DateTime @default(now())
+  IMPUESTOS Decimal
+  SUBTOTAL Decimal
+  TOTAL Decimal
+  NUM_EJEMPLAR Ejemplar @relation(fields: [NUM_EJEMPLAR], references: [NUM_EJEMPLAR])
+  NUM_EJEMPLAR int @unique
+  ID_USUARIO Ejemplar @relation(fields: [ID_USUARIO], references: [ID_USUARIO])
+  ID_USUARIO int @unique
+
+}
+
+
+
+model Post {
+  id         Int        @id @default(autoincrement())
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  title      String
+  published  Boolean    @default(false)
+  author     User       @relation(fields: [authorId], references: [id])
+  authorId   Int
+  categories Category[]
 }
