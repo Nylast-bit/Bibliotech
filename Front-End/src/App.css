@@ -9,7 +9,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: rgb(44, 148, 221);
-  overflow: hidden; /* Opcional: previene el desplazamiento de la página */
+  overflow: hidden;
 }
 
 .logo {
@@ -18,6 +18,7 @@ html, body {
   will-change: filter;
   transition: filter 300ms;
 } 
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -51,7 +52,7 @@ html, body {
   align-items: center;
 }
 
-#NamenUsername {
+#divName_y_Username {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,7 +60,7 @@ html, body {
   width: 100%;
 }
 
-#Links {
+#divLinks {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -70,7 +71,7 @@ html, body {
 
 .Links{
   margin-right: 2%;
-  font: 1em 'Comic Sans MS';
+  font: 1.2em 'Comic Sans MS';
   outline: none;
 }
 
@@ -80,7 +81,6 @@ html, body {
   right: 0px;
   width: 44.75%;
   height: 100%;
-  /*background-color: aqua;*/
 }
 
 .Register{
@@ -94,14 +94,13 @@ html, body {
   padding-top: 2%;
 }
 
-.FotoFondo{
+#imgFondo{
   width: 58vw;
   height: 100vh;
   position: absolute;
   border: none;
   top: -0.4px;
   left: -0.4px;
-  background-image: url('./assets/SignUpFondo.png');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
@@ -109,7 +108,7 @@ html, body {
   display: block;
 }
 
-#MyImage{
+#imgSeñorita{
   width: 32%;
   height: 27%;
   position: relative;
@@ -118,7 +117,7 @@ html, body {
   margin-bottom: 7%;
 }
 
-#CreateAccount{
+#h1CreateAccount{
   position: relative;
   right: 8.5%;
   margin: 2%;
@@ -129,7 +128,7 @@ html, body {
   margin-right: 7%;
 }
 
-.NamenUsername{
+.Name_y_Username{
   height: 62.5%;
   width: 38%;
   position: relative;
@@ -145,16 +144,16 @@ html, body {
   padding-bottom: 2%;
 }
 
-.NamenUsername:focus{
+.Name_y_Username:focus{
   border: 2px solid #164C71;
 }
 
-.NamenUsername::placeholder{
+.Name_y_Username::placeholder{
   color: #D1E9F9;
   font: 1em 'Comic Sans MS';
 }
 
-.TEXTS{
+.Email_y_Password{
   height: 5%;
   width: 85.5%;
   position: relative;
@@ -170,11 +169,11 @@ html, body {
   padding-bottom: 2%;
 }
 
-.TEXTS:focus{
+.Email_y_Password:focus{
   border: 2px solid #164C71;
 }
 
-.TEXTS::placeholder{
+.Email_y_Password::placeholder{
   color: #D1E9F9;
   font: 1em 'Comic Sans MS';
 }
