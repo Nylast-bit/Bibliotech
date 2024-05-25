@@ -1,11 +1,11 @@
 // DEPENDENCIES
 import express from "express";
 import { Request, Response, NextFunction } from 'express';
-import cors from "cors";
+// import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import prisma from "../lib/prisma"
-
+import bookRoute from './routes/book.routes'
 
 // START SERVER APP
 const app = express();
@@ -17,7 +17,7 @@ dotenv.config();
 
 app.use(cookieParser())
 app.use(express.json());
-
+app.use('/api/',bookRoute);
 
 // MIDDELWARES ERROR HANDLER
 app.use((_err: any, _req: Request, res: Response, _next: NextFunction) => {
@@ -39,7 +39,7 @@ prisma.$connect()
             console.log(`Server listening on port ${PORT}. Database connection successful.`);
         });
     })
-    .catch((error) => {
+    .catch((error: any) => {
         console.error("Unable to connect to the database:", error);
         process.exit(1);
     });
