@@ -5,8 +5,7 @@ export async function createBookService(
     titulo: string,
     autor: string, 
     editorial: string,
-    year_edicion: number, 
-    genero: string,
+    fecha_edicion: string, 
     calificacion: any
 ) {
     try {
@@ -16,13 +15,39 @@ export async function createBookService(
                 TITULO: titulo,
                 AUTOR: autor,
                 EDITORIAL: editorial,
-                YEAR_EDICION: year_edicion,
-                GENERO: genero, 
+                FECHA_EDICION: fecha_edicion,
                 CALIFICACION: calificacion
             }
         });
 
         return createdBook;
+    } catch (error: any) {
+        throw new Error(error);
+    }
+}
+
+export async function getAllBooksService(){
+    try {
+        const requestedBooks = await prisma.libro.findMany();
+        console.log(requestedBooks);
+        return requestedBooks;
+        
+    } catch (error: any) {
+        console.error("Error fetching books:", error);
+        throw new Error("Unable to fetch books. Please try again later.");
+    }
+}
+
+export async function getBookService(id: number) 
+{
+    try {
+        const requestedBook = await prisma.libro.findUnique({
+            where: {
+                ID_LIBRO: id,
+            }
+        })
+        
+        return requestedBook;
     } catch (error: any) {
         throw new Error(error);
     }
