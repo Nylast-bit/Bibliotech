@@ -82,10 +82,12 @@ model Ventas {
   IMPUESTOS       Decimal  @db.Decimal(10, 2)
   SUBTOTAL        Decimal  @db.Decimal(10, 2)
   TOTAL           Decimal  @db.Decimal(10, 2)
-  NUM_EJEMPLAR    Int
-  ID_USUARIO      Int
-
   // Relaciones con Ejemplar y Usuario
   ejemplar Ejemplar @relation(fields: [NUM_EJEMPLAR], references: [NUM_EJEMPLAR])
+  NUM_EJEMPLAR    Int  
+  
   usuario  Usuario  @relation(fields: [ID_USUARIO], references: [ID_USUARIO])
+ 
+  ID_USUARIO      Int 
+
 }

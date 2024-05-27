@@ -51,3 +51,49 @@ export async function getBookService(id: number)
         throw new Error(error);
     }
 }
+
+export async function updateBookService(
+    id: number,
+    isbn: number,
+    titulo: string,
+    autor: string, 
+    editorial: string,
+    fecha_edicion: string, 
+    calificacion: any
+) 
+{
+    try {
+        const requestedBook = await prisma.libro.update({
+            where: {ID_LIBRO: id,},
+            data: {
+                ISBN: isbn, 
+                TITULO: titulo, 
+                AUTOR: autor, 
+                EDITORIAL: editorial, 
+                FECHA_EDICION: fecha_edicion, 
+                CALIFICACION: calificacion
+            }
+        })
+        
+        return requestedBook;
+    } catch (error: any) {
+        throw new Error(error);
+    }
+}
+
+export async function deleteBookService(
+    id: number,
+
+) 
+{
+    try {
+        const requestedBook = await prisma.libro.delete({
+            where: {ID_LIBRO: id,},
+            
+        })
+        
+        return requestedBook;
+    } catch (error: any) {
+        throw new Error(error);
+    }
+}
