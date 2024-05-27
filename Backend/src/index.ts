@@ -8,6 +8,10 @@ import prisma from "../lib/prisma"
 import bookRoute from './routes/book.routes'
 import userRoute from './routes/user.routes'
 import sellRoute from './routes/sell.routes'
+import exemplaryRoute from './routes/exemplary.routes'
+import commentRoute from './routes/comment.routes'
+import genreRoute from './routes/genre.routes'
+
 
 // START SERVER APP
 const app = express();
@@ -21,7 +25,10 @@ app.use(cookieParser())
 app.use(express.json());
 app.use('/api/', bookRoute);
 app.use('/api/', userRoute);
-app.use('/api', sellRoute);
+app.use('/api/', sellRoute);
+app.use('/api/', exemplaryRoute);
+app.use('/api/', commentRoute);
+app.use('/api/',genreRoute);
 
 // MIDDELWARES ERROR HANDLER
 app.use((_err: any, _req: Request, res: Response, _next: NextFunction) => {
