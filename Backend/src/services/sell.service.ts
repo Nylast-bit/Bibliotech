@@ -8,8 +8,6 @@ export async function createSellService(
     total : any, 
     num_ejemplar : number, 
     id_usuario : number,
-    ejemplar : any,
-    usuario : any
 
 ) {
     try {
@@ -19,11 +17,12 @@ export async function createSellService(
                 IMPUESTOS: impuestos,
                 SUBTOTAL: subtotal,
                 TOTAL: total,
-                NUM_EJEMPLAR: num_ejemplar,
-                ID_USUARIO: id_usuario,
-                ejemplar : ejemplar,
-                usuario : usuario
-
+                ejemplar : {
+                    connect:{NUM_EJEMPLAR : num_ejemplar}
+                },
+                usuario :{
+                    connect:{ID_USUARIO: id_usuario}
+                }
             }
         });
 

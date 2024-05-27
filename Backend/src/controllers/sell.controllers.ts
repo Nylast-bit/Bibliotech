@@ -4,10 +4,10 @@ import { createSellService, getAllSellsService, getSellService, updateSellServic
 
 export const createSell = async (req: Request, res: Response) => {
   
-  const { cantidad_libros, precio, num_ejemplar, id_usuario, ejemplar, usuario} = req.body;
+  const { cantidad_libros, precio, num_ejemplar, id_usuario} = req.body;
 
   try {
-    const response = createSellService(cantidad_libros, precio * 0.18, precio * cantidad_libros, ((precio * 0.18) +(precio * cantidad_libros)), num_ejemplar, id_usuario, ejemplar, usuario);
+    const response = createSellService(cantidad_libros, precio * 0.18, precio * cantidad_libros, ((precio * 0.18) +(precio * cantidad_libros)), num_ejemplar, id_usuario);
     res.status(200).json(response);
   } catch (error) {
     
