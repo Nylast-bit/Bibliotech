@@ -3,127 +3,160 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-  }
-  
-  html, body {
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(44, 148, 221);
     overflow: hidden;
-  }
-  
-  .logo {
+}
+
+.logo {
     height: 6em;
     padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;
-  } 
-  
-  .logo.react:hover {
+}
+
+.logo.react:hover {
     filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-  
-  @keyframes logo-spin {
+}
+
+@keyframes logo-spin {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
+}
+
+@media (prefers-reduced-motion: no-preference) {
     a:nth-of-type(2) .logo {
-      animation: logo-spin infinite 20s linear;
+        animation: logo-spin infinite 20s linear;
     }
-  }
-  
-  .card {
+}
+
+.card {
     padding: 2em;
-  }
-  
-  .read-the-docs {
+}
+
+.read-the-docs {
     color: #888;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  #divLinks {
+}
+
+#divName_y_Username {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 8%;
     width: 100%;
-    padding-left: 0.2%;
-  }
-  
-  .Links{
+}
+
+#divLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 8%;
+    width: 100%;
+    padding-left: 9%;
+}
+
+.Links {
     margin-right: 2%;
-    font: 1.2em 'Comic Sans MS';
+    font: 1.2em 'Oswald MS';
     outline: none;
-  }
-  
-  #Controls{
+    text-decoration: none;
+}
+
+.Controls1 {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0px;
     width: 44.75%;
     height: 100%;
-  }
- 
-  #Register{
+}
+
+.Register {
     position: absolute;
     right: calc((100% - 59.75%) / 2);
-    top: calc((100% - 75%) / 3);
+    top: calc((100% - 80%) / 3);
     width: 59.75%;
     height: 80%;
     display: flex;
     flex-direction: column;
     padding-top: 2%;
-  }
-  
-  #imgFondo{
+}
+
+#imgFondo1 {
     width: 58vw;
     height: 100vh;
     position: absolute;
     border: none;
     top: -0.4px;
-    right: -0.4px;
+    left: -0.4px;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
     display: block;
-  }
-  
-  #imgCarrito_de_compras{
+}
+
+#imgSeñorita {
     width: 32%;
-    height: 24%;
+    height: 27%;
     position: relative;
     left: 25%;
     margin-left: 2%;
     margin-bottom: 7%;
-  }
-  
-  #h1Welcomeback{
+}
+
+#h1CreateAccount {
     position: relative;
     right: 8.5%;
     margin: 2%;
-    font: 2em 'Comic Sans MS';
-  }
-  
-  #h4RemenberMe{
-    position: relative;
-    font: 0.85em 'Comic Sans MS';
-  }
+    font: 2em 'Oswald MS';
+}
 
-  .Username_y_Password{
+#Name {
+    margin-right: 7%;
+}
+
+.Name_y_Username {
+    height: 62.5%;
+    width: 38%;
+    position: relative;
+    right: 3%;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid #00000000;
+    background-color: #7CB5DD;
+    color: #D1E9F9;
+    padding-left: 2%;
+    font: 1em 'Oswald MS';
+    margin-bottom: 6%;
+    padding-bottom: 2%;
+}
+
+.Name_y_Username:focus {
+    border: 2px solid #164C71;
+}
+
+.Name_y_Username::placeholder {
+    color: #D1E9F9;
+    font: 1em 'Oswald MS';
+}
+
+.Email_y_Password {
     height: 5%;
     width: 85.5%;
     position: relative;
@@ -134,21 +167,27 @@
     background-color: #7CB5DD;
     color: #D1E9F9;
     padding-left: 2%;
-    font: 1em 'Comic Sans MS';
+    font: 1em 'Oswald MS';
     margin-bottom: 6%;
     padding-bottom: 2%;
-  }
-  
-  .Username_y_Password:focus{
+}
+
+.Email_y_Password:focus {
     border: 2px solid #164C71;
-  }
-  
-  .Username_y_Password::placeholder{
+}
+
+.Email_y_Password::placeholder {
     color: #D1E9F9;
-    font: 1em 'Comic Sans MS';
-  }
-  
-  #LogIn{
+    font: 1em 'Oswald MS';
+}
+
+#OjitoEscondido {
+    background-image: url('./assets/OjitoEscondido.png');
+    height: 80%;
+    width: 5%;
+}
+
+#SignUp {
     height: 7%;
     width: 88%;
     position: relative;
@@ -157,15 +196,9 @@
     border: none;
     background-color: #59BBFF;
     color: #D1E9F9;
-    font: 1em 'Comic Sans MS';
+    font: 1em 'Oswald MS';
     margin-bottom: 6%;
     margin-top: 2%;
     padding-bottom: 2%;
     cursor: pointer;
-  }
-
-  #chbxRemenberMe{
-    position: relative;
-    border-radius: 15px;
-    border: none;
-  }
+}

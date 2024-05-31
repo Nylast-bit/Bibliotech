@@ -1,0 +1,179 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(44, 148, 221);
+    overflow: hidden;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#divLinks1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 8%;
+    width: 110%;
+    padding-left: 0.2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    left: -2.4%;
+}
+
+.Links1 {
+    margin-right: 2%;
+    font: 1.2em 'Oswald MS';
+    outline: none;
+    text-decoration: none;
+}
+
+#Controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44.75%;
+    height: 100%;
+}
+
+#Register {
+    position: absolute;
+    right: calc((100% - 59.75%) / 2);
+    top: calc((100% - 75%) / 3);
+    width: 59.75%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+}
+
+#imgFondo {
+    width: 58vw;
+    height: 100vh;
+    position: absolute;
+    border: none;
+    top: -0.4px;
+    right: -0.4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+#imgCarrito_de_compras {
+    width: 32%;
+    height: 24%;
+    position: relative;
+    left: 25%;
+    margin-left: 2%;
+    margin-bottom: 7%;
+}
+
+#h1Welcomeback {
+    position: relative;
+    right: 8.5%;
+    margin: 2%;
+    font: 2em 'Oswald MS';
+}
+
+#h4RemenberMe {
+    position: relative;
+    font: 0.85em 'Oswald MS';
+}
+
+.Username_y_Password {
+    height: 5%;
+    width: 85.5%;
+    position: relative;
+    right: 3%;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid #00000000;
+    background-color: #7CB5DD;
+    color: #D1E9F9;
+    padding-left: 2%;
+    font: 1em 'Oswald MS';
+    margin-bottom: 6%;
+    padding-bottom: 2%;
+}
+
+.Username_y_Password:focus {
+    border: 2px solid #164C71;
+}
+
+.Username_y_Password::placeholder {
+    color: #D1E9F9;
+    font: 1em 'Oswald MS';
+}
+
+#LogIn {
+    height: 7%;
+    width: 88%;
+    position: relative;
+    right: 3%;
+    border-radius: 6px;
+    border: none;
+    background-color: #59BBFF;
+    color: #D1E9F9;
+    font: 1em 'Oswald MS';
+    margin-bottom: 6%;
+    margin-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+}
+
+#chbxRemenberMe {
+    position: relative;
+    border-radius: 15px;
+    border: none;
+}
