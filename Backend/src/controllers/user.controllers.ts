@@ -1,18 +1,6 @@
 import { Request, Response, /*response NextFunction */} from "express";
 
-import { createUserService, getAllUsersService, getUserService, updateUserService, deleteUserService} from "../services/user.service";
-
-export const createUser = async (req: Request, res: Response) => {
-  
-  const { usuario, contrasena, correo_electronico, tipo_usuario } = req.body;
-
-  try {
-    const response = createUserService(usuario, contrasena, correo_electronico, tipo_usuario);
-    res.status(200).json(response);
-  } catch (error) {
-    
-  }
-}
+import { getAllUsersService, getUserService, updateUserService, deleteUserService} from "../services/user.service";
 
 export const getAllUsers = async ( req: Request, res: Response) => {
   
@@ -43,10 +31,10 @@ export const getUser = async ( req: Request, res: Response) => {
 
 export const updateUser = async ( req: Request, res: Response) => {
   const request = parseInt(req.params.id)
-  const { usuario, contrasena, correo_electronico, tipo_usuario} = req.body;
+  const { contrasena, correo_electronico, tipo_usuario} = req.body;
   try {
     
-    const response = await updateUserService(request, usuario, contrasena, correo_electronico, tipo_usuario);
+    const response = await updateUserService(request, contrasena, correo_electronico, tipo_usuario);
     
     res.status(200).json(response);
 

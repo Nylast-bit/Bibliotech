@@ -1,29 +1,5 @@
 import prisma from "../../lib/prisma";
 
-export async function createUserService(
-    usuario: string,
-    contrasena: string,
-    correo_electronico: string, 
-    tipo_usuario: string,
-
-) {
-    try {
-        const createdUser = await prisma.usuario.create({
-            data: {
-                USUARIO: usuario,
-                CONTRASENA: contrasena,
-                CORREO_ELECTRONICO: correo_electronico,
-                TIPO_USUARIO: tipo_usuario,
-
-            }
-        });
-
-        return createdUser;
-    } catch (error: any) {
-        throw new Error(error);
-    }
-}
-
 export async function getAllUsersService(){
     try {
         const requestedUsers = await prisma.usuario.findMany();
@@ -52,7 +28,6 @@ export async function getUserService(id: number)
 
 export async function updateUserService(
     id: number,
-    usuario: string,
     contrasena: string,
     correo_electronico: string, 
     tipo_usuario: string,
@@ -62,7 +37,6 @@ export async function updateUserService(
         const requestedUser = await prisma.usuario.update({
             where: {ID_USUARIO: id},
             data: {
-                USUARIO: usuario,
                 CONTRASENA: contrasena,
                 CORREO_ELECTRONICO: correo_electronico,
                 TIPO_USUARIO: tipo_usuario

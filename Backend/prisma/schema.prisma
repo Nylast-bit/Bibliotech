@@ -1,6 +1,5 @@
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
@@ -10,7 +9,7 @@ datasource db {
 
 model Libro {
   ID_LIBRO       Int      @id @default(autoincrement())
-  ISBN           Int      @unique
+  ISBN           Int      
   TITULO         String   @db.VarChar(255)
   AUTOR          String   @db.VarChar(255)
   EDITORIAL      String   @db.VarChar(255)
@@ -40,10 +39,9 @@ model Libro_Genero {
 
 model Usuario {
   ID_USUARIO         Int          @id @default(autoincrement())
-  USUARIO            String       @unique
-  CONTRASENA         String
-  CORREO_ELECTRONICO String
-  TIPO_USUARIO       String
+  CORREO_ELECTRONICO String       @unique       
+  CONTRASENA         String       
+  TIPO_USUARIO       String?
   FECHA_CREACION     DateTime     @default(now())
   Comentario         Comentario[]
   Ventas             Ventas[]

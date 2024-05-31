@@ -62,9 +62,10 @@ export async function updateBookService(
     calificacion: any
 ) 
 {
+    
     try {
         const requestedBook = await prisma.libro.update({
-            where: {ID_LIBRO: id,},
+            where: {ID_LIBRO: id},
             data: {
                 ISBN: isbn, 
                 TITULO: titulo, 

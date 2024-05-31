@@ -3,7 +3,7 @@ import { createSell, getAllSells, getSell , updateSell, deleteSell} from "../con
 
 const router = express.Router();
 
-router.post("/sell", createSell)
+router.post("/sell" ,createSell)
 router.get("/sell", getAllSells)
 router.get("/sell/:id", getSell)
 router.put("/sell/:id", updateSell)
