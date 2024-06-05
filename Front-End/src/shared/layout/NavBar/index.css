@@ -19,7 +19,6 @@ body{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    z-index: 40;
 }
 
 #divBarraSuperior{

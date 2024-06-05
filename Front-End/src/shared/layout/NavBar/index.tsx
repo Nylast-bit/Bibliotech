@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import MenuBook from "../../../pages/authentications/MenuBook";
+import Home from "../../../pages/authentications/Home"
+import { Outlet, Link } from "react-router-dom";
 import CarritoCompras from '../../../assets/CarritoCompras.png'
 import Lupa from '../../../assets/lupa.png'
-import BackArrow from '../../../assets/BackArrow.png'
 import './index.css'
 
 const Navbar = () => {
@@ -9,6 +10,7 @@ const Navbar = () => {
 
     return (
         <>
+        <div id="divBody">
             <div id="divBarraSuperior">
                 <img id="imgBarraSuperiorCarrito" src={CarritoCompras}/>
                 <h1 id="h1Bibliotech">BiblioTech</h1>
@@ -20,6 +22,8 @@ const Navbar = () => {
                 <button id="btnPerson"></button>
                 <button id="btnSetings"></button>
             </div>
+                <Outlet />
+        </div>
         </>
     )
 }

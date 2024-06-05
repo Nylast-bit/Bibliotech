@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import CarritoCompras from '../../../assets/CarritoCompras.png'
-import Lupa from '../../../assets/lupa.png'
-import BackArrow from '../../../assets/BackArrow.png'
+import principito from "../../../assets/principito.png"
+import cometa from "../../../assets/cometa.png"
+import BC from "../../../assets/BuffyCazavampiros.png"
+import MM from "../../../assets/MM.png"
+import RG from "../../../assets/RG.png"
+import PDP from "../../../assets/PDP.png"
 import './index.css'
 
 const Home = () => {
@@ -9,7 +12,6 @@ const Home = () => {
 
     return (
         <>
-        <div id="divBody">
             <div id="divInferior">
                 <div id="divInferiorIzquierdo">
                     <h1 id="h1Categorias">Categorias</h1>
@@ -27,29 +29,34 @@ const Home = () => {
                     </div>
                 </div>
                 <div id="divInferiorDerecho">
-                    <div id="divContenedor">
-                        <div id="imgBack"/>
-                        <div id="divLibro">
-                            <div id="div-imgLibro">
-                                <div id="divCirculo_de_Mierda">
-                                    <img id="imgLibro"/>
-                                </div>
-                            </div>
-                            <div id="divInfoLibro">
-                                <h1 id="h1TituloLibro">El Principito</h1>
-                                <h2 id="h2Autor">Antoine de Saint-Exupéry</h2>
-                                <div id="divCalificación"></div>
-                                <div id="div-h3Categoria">
-                                    <h3 id="h3Categoria">Children’s literature</h3>
-                                </div>
-                                <h3 id="h3Info">The Little Prince, the protagonist of the story, is a very unique boy who lives on a distant asteroid, and who in his innocence is the bearer of great wisdom. He arrives on Earth after a long space journey, looking for someone who can draw a lamb.</h3>
-                                <button id="btnComprar">Comprar</button>
-                            </div>
+                    <div id="divContenedor2">
+                        <div className="Libros">
+                            <div className="Images" style={{ backgroundImage: `url(${principito})`}} />
+                            <h1 className="h1LibroNombre">El Prinipito</h1>
+                        </div>
+                        <div className="Libros">
+                            <div className="Images" style={{ backgroundImage: `url(${cometa})`}} />
+                            <h1 className="h1LibroNombre">El Cometa</h1>
+                        </div>
+                        <div className="Libros">
+                            <div className="Images" style={{ backgroundImage: `url(${BC})`}} />
+                            <h1 className="h1LibroNombre">Buffy Cazavampiros</h1>
+                        </div>
+                        <div className="Libros">
+                            <div className="Images" style={{ backgroundImage: `url(${MM})`}} />
+                            <h1 className="h1LibroNombre">Magicos misterios</h1>
+                        </div>
+                        <div className="Libros">
+                            <div className="Images" style={{ backgroundImage: `url(${RG})`}} />
+                            <h1 className="h1LibroNombre"></h1>
+                        </div>
+                        <div className="Libros">
+                            <div className="Images" style={{ backgroundImage: `url(${PDP})`}} />
+                            <h1 className="h1LibroNombre"></h1>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </>
     )
 }
