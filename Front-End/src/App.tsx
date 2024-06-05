@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LogIn from "./pages/authentications/login";
 import SignUp from "./pages/authentications/signUp";
 import Home from "./pages/authentications/home";

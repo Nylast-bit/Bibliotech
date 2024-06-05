@@ -1,0 +1,145 @@
+:root{
+    --colorBlueText: #1E608E;
+    --colorBlueBorderBottom: #2C94DD;
+}
+
+body{
+    background-color: #00000000;
+}
+
+#divBody{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(184, 209, 222);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 40;
+}
+
+#divBarraSuperior{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    height: 5%;
+    padding: 0.6%;
+    display: flex;
+    flex-direction: row;
+    background-color: #2C94DD;
+    z-index: 80;
+}
+
+#imgBarraSuperiorCarrito{
+    position: absolute;
+    top: 13%;
+    left: 4%;
+    height: 75%;
+}
+
+#h1Bibliotech{
+    position: absolute;
+    top: -12%;
+    left: 9%;
+    transform: scaleY(1.1);
+    font: 1.9vw 'Oswald';
+    font-weight: bold;
+    color: var(--colorBlueText);
+}
+
+#divBarraBusqueda{
+    position: absolute;
+    display: block;
+    resize: none;
+    top: 24%;
+    left: 27%;
+    height: 3.8vh;
+    width: 35%;
+    background-color: #7CB5DD;
+    overflow: hidden;
+    border: 0.25vh solid #00000000;
+    border-radius: 0.6vh;
+}
+
+#divBarraBusqueda:focus-within{
+    border: 0.25vh solid #164C71;
+}
+
+#textBusqueda{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3.8vh;
+    width: 93%;
+    color: #D1E9F9;
+    background-color: #00000000;
+    padding-left: 1.5%;
+    font: 0.9vw 'Oswald MS';
+    outline: none;
+    border: none;
+}
+
+#textBusqueda::placeholder{
+    color: #D1E9F9;
+}
+
+#buttonBusqueda{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.8vw;
+    height: 3.8vh;
+    border: none;
+    outline: none;
+    background-color: #00000000;
+    background-image: url(../../../assets/lupa.png);
+    background-size: 70% 70%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+#h2Inicio{
+    position: absolute;
+    top: 5%;
+    left: 73%;
+    transform: scaleY(1.1);
+    font: 1.5vw 'Oswald';
+    font-weight: bold;
+    color: var(--colorBlueText);
+}
+
+#btnPerson{
+    position: absolute;
+    width: calc(3.3932135728542914vw * 0.8);
+    height: calc(6.649616368286445vh * 0.8);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/person.png');
+    background-color: #00000000;
+    outline: none;
+    border: none;
+    left: 86.5%;
+    cursor: pointer;
+}
+
+#btnSetings{
+    position: absolute;
+    width: calc(3.193612774451098vw * 0.8);
+    height: calc(7.033248081841432vh * 0.8);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/settings.png');
+    background-color: #00000000;
+    outline: none;
+    border: none;
+    left: 93%;
+    cursor: pointer;
+}
