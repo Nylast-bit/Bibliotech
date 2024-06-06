@@ -115,20 +115,6 @@ body{
     color: var(--colorBlueText);
 }
 
-#btnPerson{
-    position: absolute;
-    width: calc(3.3932135728542914vw * 0.8);
-    height: calc(6.649616368286445vh * 0.8);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-image: url('../../../assets/person.png');
-    background-color: #00000000;
-    outline: none;
-    border: none;
-    left: 86.5%;
-    cursor: pointer;
-}
-
 #btnSetings{
     position: absolute;
     width: calc(3.193612774451098vw * 0.8);
@@ -141,4 +127,55 @@ body{
     border: none;
     left: 93%;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+#MenuEmergente{
+    position: absolute;
+    width: calc(15.50232867598137vw * 0.8);
+    height: calc(36.44501278772378vh * 0.8);
+    background-color: #FFFFFF;
+    top: 0.10vw;
+    right: -0.4vw;
+    border-radius: 1.3vh;
+    box-shadow: 0.2557544757033248vh 0.2557544757033248vh 0.2557544757033248vh 0.1278772378516624vh rgba(0, 0, 0, 0.2);
+    cursor: none;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.divMenuItem{
+    height: calc(5.370843989769821vh * 0.5335);
+    width: calc(15.50232867598137vw * 0.6746);
+    background-color: #00000000;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    padding: 8%;
+    padding-top: 4.3%;
+    opacity: 60%;
+    align-items: center;
+}
+
+.divMenuItem:hover{
+    background-color: #adadad;
+}
+
+.svgs{
+    height: 125%;
+    background-color: #00000000;
+    margin-right: 8%;
+}
+
+.h2TextMenuItem{
+    position: relative;
+    top: 14%;
+    font: 1.2vw 'Oswald';
+    font-weight: bold;
+    color: black;
+}
+
+.path{
+    fill: black;
 }

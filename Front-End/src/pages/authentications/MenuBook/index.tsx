@@ -7,7 +7,7 @@ const MenuBook = () => {
         <>
             <div id="divInferior">
                 <div id="divInferiorIzquierdo">
-                    <h1 id="h1Categorias">Categorias</h1>
+                    <h1 id="h1CategoriaRelacionada">Categorías</h1>
                     <div id="divCategorias">
                         <button className="CatogoriasButtons">Romance</button>
                         <button className="CatogoriasButtons">Historia</button>
@@ -33,7 +33,13 @@ const MenuBook = () => {
                             <div id="divInfoLibro">
                                 <h1 id="h1TituloLibro">El Principito</h1>
                                 <h2 id="h2Autor">Antoine de Saint-Exupéry</h2>
-                                <div id="divCalificación"></div>
+                                <div id="divCalificación">
+                                    <div className="Star"/>
+                                    <div className="Star"/>
+                                    <div className="Star"/>
+                                    <div className="Star"/>
+                                    <div className="Star half"/>
+                                </div>
                                 <div id="div-h3Categoria">
                                     <h3 id="h3Categoria">Children’s literature</h3>
                                 </div>

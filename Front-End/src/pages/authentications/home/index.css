@@ -72,16 +72,17 @@ body{
     border-bottom: 0.15vh solid #00000000;
 }
 
-#divInferiorDerecho{
+#divInferiorDerecho2{
     background-color: #DEF1FF;
     position: relative;
     width: 82.5%;
     height: 100%;
     padding-left: 7.5%;
-    padding-top: 4%;
+    padding-top: 0.1%;
 }
 
 #divContenedor2{
+    position: relative;
     width: 84%;
     height: 100%;
     display: flex;
@@ -89,7 +90,7 @@ body{
     flex-wrap: wrap;
     overflow-y: auto;
     padding-bottom: 5%;
-    margin-bottom: 5%;
+    padding-top: 5%;
 }
 
 #divContenedor2::-webkit-scrollbar {
@@ -102,7 +103,7 @@ body{
     width: calc(17.764471057884233vw * 0.9);
     max-width: calc(17.764471057884233vw * 0.9);
     margin: 4%;
-    margin-bottom: 6%;
+    margin-bottom: 5%;
     margin-top: 0;
     cursor: pointer;
     display: flex;

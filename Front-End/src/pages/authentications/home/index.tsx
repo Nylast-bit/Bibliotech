@@ -14,7 +14,7 @@ const Home = () => {
         <>
             <div id="divInferior">
                 <div id="divInferiorIzquierdo">
-                    <h1 id="h1Categorias">Categorias</h1>
+                    <h1 id="h1Categorias">Categorías</h1>
                     <div id="divCategorias">
                         <button className="CatogoriasButtons">Romance</button>
                         <button className="CatogoriasButtons">Historia</button>
@@ -28,7 +28,7 @@ const Home = () => {
                         <button className="CatogoriasButtons">Comics</button>
                     </div>
                 </div>
-                <div id="divInferiorDerecho">
+                <div id="divInferiorDerecho2">
                     <div id="divContenedor2">
                         <div className="Libros">
                             <div className="Images" style={{ backgroundImage: `url(${principito})`}} />
@@ -48,11 +48,11 @@ const Home = () => {
                         </div>
                         <div className="Libros">
                             <div className="Images" style={{ backgroundImage: `url(${RG})`}} />
-                            <h1 className="h1LibroNombre"></h1>
+                            <h1 className="h1LibroNombre">Robot Gigantesco</h1>
                         </div>
                         <div className="Libros">
                             <div className="Images" style={{ backgroundImage: `url(${PDP})`}} />
-                            <h1 className="h1LibroNombre"></h1>
+                            <h1 className="h1LibroNombre">Policán</h1>
                         </div>
                     </div>
                 </div>
