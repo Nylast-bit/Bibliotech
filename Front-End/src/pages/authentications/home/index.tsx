@@ -54,6 +54,8 @@ const Home = () => {
                             <div className="Images" style={{ backgroundImage: `url(${PDP})`}} />
                             <h1 className="h1LibroNombre">Policán</h1>
                         </div>
+                        <br/><br/><br/><br/><br/>
+                        <div style={{height: '70%'}}/>
                     </div>
                 </div>
             </div>
