@@ -4,9 +4,10 @@ import { Outlet, Link } from "react-router-dom";
 import CarritoCompras from '../../../assets/CarritoCompras.png'
 import Lupa from '../../../assets/lupa.png'
 import './index.css'
+import { Script } from "vm";
+import { useState } from "react";
 
 const Navbar = () => {
-
 
     return (
         <>
@@ -18,7 +19,6 @@ const Navbar = () => {
                     <input id="textBusqueda" type='text' placeholder="Search..."/>
                     <input id="buttonBusqueda" src={Lupa} type='button'/>
                 </div>
-                <h1 id="h2Inicio">Inicio</h1>
                 <button id="btnSetings">
                     {/*si quieren que se vea este menu vayan a #MenuEmergente del css y quitenle el visibility: hidden ya asi se dan una idea de como mostrarlo cuando lo presionen*/}
                     <div id="MenuEmergente">

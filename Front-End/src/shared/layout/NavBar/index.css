@@ -105,16 +105,6 @@ body{
     background-repeat: no-repeat;
 }
 
-#h2Inicio{
-    position: absolute;
-    top: 5%;
-    left: 73%;
-    transform: scaleY(1.1);
-    font: 1.5vw 'Oswald';
-    font-weight: bold;
-    color: var(--colorBlueText);
-}
-
 #btnSetings{
     position: absolute;
     width: calc(3.193612774451098vw * 0.8);
