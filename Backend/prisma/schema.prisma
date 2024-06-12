@@ -28,13 +28,13 @@ model Genero {
 }
 
 model Libro_Genero {
+  ID_LIBRO_GENERO      Int      @id @default(autoincrement())
+  ID_GENERO             Int
+  ID_LIBRO               Int
+
+  // Relaciones con Genero y Libro
   genero Genero @relation(fields: [ID_GENERO], references: [ID_GENERO])
-  libro  Libro  @relation(fields: [ID_LIBRO], references: [ID_LIBRO])
-
-  ID_GENERO Int
-  ID_LIBRO  Int
-
-  @@id([ID_GENERO, ID_LIBRO])
+  libro   Libro   @relation(fields: [ID_LIBRO], references: [ID_LIBRO])
 }
 
 model Usuario {
