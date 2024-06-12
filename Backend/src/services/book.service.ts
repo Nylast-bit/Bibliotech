@@ -1,11 +1,12 @@
 import prisma from "../../lib/prisma";
 
 export async function createBookService(
-    isbn: number,
+    isbn: string,
     titulo: string,
     autor: string, 
     editorial: string,
     fecha_edicion: string, 
+    imageurl: string,
     calificacion: any
 ) {
     try {
@@ -16,6 +17,7 @@ export async function createBookService(
                 AUTOR: autor,
                 EDITORIAL: editorial,
                 FECHA_EDICION: fecha_edicion,
+                IMAGEURL: imageurl,
                 CALIFICACION: calificacion
             }
         });
@@ -52,15 +54,40 @@ export async function getBookService(id: number)
     }
 }
 
+export async function getBookByNameService(title: String ) 
+{
+    try {
+        var requestedBooks = null;
+        requestedBooks = await prisma.libro.findMany({
+            where: {
+              TITULO: {
+                 
+                contains: title.toString(), 
+                mode: "insensitive"
+              },
+            },
+          })
+
+          
+          
+          
+          console.log(requestedBooks);
+        return requestedBooks;
+    } catch (error: any) {
+        throw new Error(error);
+    }
+}
+
 export async function updateBookService(
     id: number,
-    isbn: number,
+    isbn: string,
     titulo: string,
     autor: string, 
     editorial: string,
     fecha_edicion: string, 
     calificacion: any
 ) 
+
 {
     
     try {

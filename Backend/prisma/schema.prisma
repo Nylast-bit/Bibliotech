@@ -9,11 +9,12 @@ datasource db {
 
 model Libro {
   ID_LIBRO       Int      @id @default(autoincrement())
-  ISBN           Int      
+  ISBN           String      
   TITULO         String   @db.VarChar(255)
   AUTOR          String   @db.VarChar(255)
   EDITORIAL      String   @db.VarChar(255)
   FECHA_EDICION  String   @db.VarChar(255)
+  IMAGEURL       String   @db.VarChar(255)
   CALIFICACION   Decimal  @db.Decimal(18, 2)
 
   Libro_Genero Libro_Genero[]
@@ -39,9 +40,9 @@ model Libro_Genero {
 
 model Usuario {
   ID_USUARIO         Int          @id @default(autoincrement())
+  NOMBRE         String 
   CORREO_ELECTRONICO String       @unique       
   CONTRASENA         String       
-  TIPO_USUARIO       String?
   FECHA_CREACION     DateTime     @default(now())
   Comentario         Comentario[]
   Ventas             Ventas[]

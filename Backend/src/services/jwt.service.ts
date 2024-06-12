@@ -35,10 +35,10 @@ export async function loginService(
 }
 
 export async function signupService(
+    nombre: any,
     email: any, 
     contrasena: any,
     confirmar_contrasena: any,
-    tipo_usuario: any,
 
 ): Promise< any | null> {
     try {
@@ -52,7 +52,6 @@ export async function signupService(
             return {success: false, response: "Invalid email format"};
         }
         
-        console.log(contrasena, confirmar_contrasena)
 
         if (contrasena !== confirmar_contrasena){
             return {success: false, response: "Passwords doesn't match"};
@@ -63,9 +62,10 @@ export async function signupService(
         
         await prisma.usuario.create({
             data: {
+                NOMBRE: nombre,
                 CORREO_ELECTRONICO: email,
                 CONTRASENA: hash,
-                TIPO_USUARIO: tipo_usuario,
+                
 
             }
         });

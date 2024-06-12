@@ -1,7 +1,7 @@
 // DEPENDENCIES
 import express from "express";
 import { Request, Response, NextFunction } from 'express';
-// import cors from "cors";
+import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import prisma from "../lib/prisma"
@@ -21,7 +21,11 @@ const app = express();
 dotenv.config();
 
 // MIDDELWARES
-
+app.use(cors({
+    origin: ['148.255.247.14', 'http://localhost:5173', 'http://148.255.247.14:5173'],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+}));
 app.use(cookieParser())
 app.use(express.json());
 app.use('/api/', bookRoute);

@@ -10,16 +10,16 @@ export const login = async (req: Request, res: Response) => {
     const response = await loginService(correo_electronico, contrasena);
     res.status(200).json(response);
   } catch (error) {
-    
+    console.log(error)
   }
 }
 
 export const signup = async (req: Request, res: Response, next: NextFunction) => {
   
-  const { correo_electronico, contrasena, confirmar_contrasena, tipo_usuario} = req.body;
-
+  const { nombre, correo_electronico, contrasena, confirmar_contrasena} = req.body;
+console.log(nombre, correo_electronico, contrasena, confirmar_contrasena)
   try {
-    const response = await signupService(correo_electronico, contrasena, confirmar_contrasena, tipo_usuario);
+    const response = await signupService(nombre,correo_electronico, contrasena, confirmar_contrasena);
     res.status(200).json(response);
   } catch (error) {
     next(error);  
