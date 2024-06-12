@@ -61,7 +61,7 @@ function SignUp() {
         <img id="imgFondo1" src={Libreria} />
         <div id="Controls1" className="Controls1">
           <div id="Register" className="Register">
-            <h1 id="h1CreateAccount">Create Account</h1>
+            <h1 id="h1CreateAccount">Crear cuenta</h1>
             <img id="imgSeñorita" src={Señorita} />
             <input
               name="name"
@@ -69,7 +69,7 @@ function SignUp() {
                 handleChange(e);
               }}
               className="Email_y_Password"
-              placeholder="Name"
+              placeholder="Nombre"
               tabIndex={1}
               type="text"
             />
@@ -89,7 +89,7 @@ function SignUp() {
                 handleChange(e);
               }}
               className="Email_y_Password"
-              placeholder="Password"
+              placeholder="Contraseña"
               tabIndex={4}
               type="password"
             />
@@ -99,7 +99,7 @@ function SignUp() {
                 handleChange(e);
               }}
               className="Email_y_Password"
-              placeholder="Confirm Password"
+              placeholder="Confirmar contraseña"
               tabIndex={4}
               type="password"
             />
@@ -107,15 +107,15 @@ function SignUp() {
               id="SignUp"
               type="button"
               tabIndex={5}
-              value="Sign Up"
+              value="Registrarse"
               onClick={handleSignUp}
             />
             <div id="divLinks">
               <p className="Links" style={{ color: "#D1E9F9" }}>
-                Already have an account?
+                ¿Ya tienes una cuenta?
               </p>
               <p className="Links" style={{ color: "#1E608E" }}>
-                Log in
+                Iniciar sesión
               </p>
             </div>
           </div>

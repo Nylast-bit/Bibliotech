@@ -79,6 +79,7 @@ body{
     height: 100%;
     padding-left: 7.5%;
     padding-top: 0.1%;
+    margin-bottom: 10%;
 }
 
 #divContenedor2{
@@ -98,10 +99,8 @@ body{
 }
 
 .Libros{
-    height: calc(60.230179028132994vh * 0.9);
-    max-height: calc(60.230179028132994vh * 0.9);
+    height: calc(60.230179028132994vh * 0.855);
     width: calc(17.764471057884233vw * 0.9);
-    max-width: calc(17.764471057884233vw * 0.9);
     margin: 4%;
     margin-bottom: 5%;
     margin-top: 0;
@@ -112,22 +111,27 @@ body{
 }
 
 .Images{
-    max-width: calc(17.764471057884233vw * 0.9);
     width: calc(17.764471057884233vw * 0.9);
     height: calc(49.48849104859335vh * 0.9);
-    max-height: calc(49.48849104859335vh * 0.9);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    border-style: outset;
+    /*border-style: inset;
+    border-style: double;
+    border-style: outset;
+    border-style:solid;*/
 }
 
 .h1LibroNombre{
     transform: scaleY(1.1);
-    top: 6%;
+    margin: 0;
     font: 1.7vw 'Oswald';
     font-weight: bold;
     color: var(--colorBlueText);
     width: 65%;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
+    position: relative;
+    top: 4%;
 }

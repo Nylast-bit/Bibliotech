@@ -33,7 +33,7 @@ body{
 #h1CategoriaRelacionada{
     position: relative;
     transform: scaleY(1.1);
-    top: 6%; /*2%*/
+    top: 2%;
     font: 1.7vw 'Oswald';
     font-weight: bold;
     color: #1E608E;
