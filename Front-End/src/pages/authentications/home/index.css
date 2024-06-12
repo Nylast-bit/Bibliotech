@@ -1,0 +1,137 @@
+:root{
+    --colorBlueText: #1E608E;
+    --colorBlueBorderBottom: #2C94DD;
+}
+
+body{
+    background-color: #00000000;
+}
+
+#divInferior{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 92.8%;
+    background-color: #00000000;
+    margin-top: 3.5%;
+}
+
+#divInferiorIzquierdo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 17.5%;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+#h1Categorias{
+    position: relative;
+    transform: scaleY(1.1);
+    top: 6%;
+    font: 1.7vw 'Oswald';
+    font-weight: bold;
+    color: #1E608E;
+    padding-bottom: 2%;
+    border-bottom: 0.15vh solid var(--colorBlueBorderBottom);
+    width: 65%;
+}
+
+#divCategorias{
+    position: relative;
+    top: 11%;
+    right: 6%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.CatogoriasButtons{
+    background-color: #00000000;
+    outline: none;
+    border: none;
+    color: var(--colorBlueText);
+    border-bottom: 0.15vh solid var(--colorBlueBorderBottom);
+    font: 1.3vw 'Oswald';
+    text-align: left;
+    margin-bottom: 5%;
+    padding: 3%;
+    transform: scaleY(1.1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.CatogoriasButtons:active{
+    background-color: #EAEAEA;
+    border-radius: 0.7vh;
+    border-bottom: 0.15vh solid #00000000;
+}
+
+#divInferiorDerecho2{
+    background-color: #DEF1FF;
+    position: relative;
+    width: 82.5%;
+    height: 100%;
+    padding-left: 7.5%;
+    padding-top: 0.1%;
+    margin-bottom: 10%;
+}
+
+#divContenedor2{
+    position: relative;
+    width: 84%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+#divContenedor2::-webkit-scrollbar {
+    display: none;
+}
+
+.Libros{
+    height: calc(60.230179028132994vh * 0.855);
+    width: calc(17.764471057884233vw * 0.9);
+    margin: 4%;
+    margin-bottom: 5%;
+    margin-top: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Images{
+    width: calc(17.764471057884233vw * 0.9);
+    height: calc(49.48849104859335vh * 0.9);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-style: outset;
+    /*border-style: inset;
+    border-style: double;
+    border-style: outset;
+    border-style:solid;*/
+}
+
+.h1LibroNombre{
+    transform: scaleY(1.1);
+    margin: 0;
+    font: 1.7vw 'Oswald';
+    font-weight: bold;
+    color: var(--colorBlueText);
+    width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    top: 4%;
+}

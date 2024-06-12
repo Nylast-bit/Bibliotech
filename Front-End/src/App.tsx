@@ -1,30 +1,24 @@
-import { useState } from 'react'
-import LogIn from './pages/authentications/login';
-import SignUp from './pages/authentications/singUp';
-import Home from './pages/authentications/home';
+import LogIn from "./pages/authentications/login";
+import SignUp from "./pages/authentications/signUp";
+import Navbar from "./shared/layout/NavBar";
+import Home from "./pages/authentications/Home";
+import MenuBook from "./pages/authentications/MenuBook";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css'
 
 function App() {
-
-
   return (
-    <div className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="signup" element={<SignUp />} />
-            <Route path="login" element={<LogIn />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<LogIn />} />
 
-          </ Route>
-
-        </Routes>
-
-      </BrowserRouter>
-
-    </div>
-  )
+        <Route path="/" element={<Navbar />}>
+          <Route path="home" element={<Home />} />
+          <Route path="menubook" element={<MenuBook />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
