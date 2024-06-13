@@ -31,10 +31,10 @@ export const getUser = async ( req: Request, res: Response) => {
 
 export const updateUser = async ( req: Request, res: Response) => {
   const request = parseInt(req.params.id)
-  const { contrasena, correo_electronico, tipo_usuario} = req.body;
+  const { contrasena, correo_electronico, nombre} = req.body;
   try {
     
-    const response = await updateUserService(request, contrasena, correo_electronico, tipo_usuario);
+    const response = await updateUserService(request, nombre, contrasena, correo_electronico);
     
     res.status(200).json(response);
 

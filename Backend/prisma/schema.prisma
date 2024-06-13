@@ -9,11 +9,12 @@ datasource db {
 
 model Libro {
   ID_LIBRO       Int      @id @default(autoincrement())
-  ISBN           Int      
+  ISBN           String      
   TITULO         String   @db.VarChar(255)
   AUTOR          String   @db.VarChar(255)
   EDITORIAL      String   @db.VarChar(255)
   FECHA_EDICION  String   @db.VarChar(255)
+  IMAGEURL       String   @db.VarChar(255)
   CALIFICACION   Decimal  @db.Decimal(18, 2)
 
   Libro_Genero Libro_Genero[]
@@ -28,20 +29,20 @@ model Genero {
 }
 
 model Libro_Genero {
+  ID_LIBRO_GENERO      Int      @id @default(autoincrement())
+  ID_GENERO             Int
+  ID_LIBRO               Int
+
+  // Relaciones con Genero y Libro
   genero Genero @relation(fields: [ID_GENERO], references: [ID_GENERO])
-  libro  Libro  @relation(fields: [ID_LIBRO], references: [ID_LIBRO])
-
-  ID_GENERO Int
-  ID_LIBRO  Int
-
-  @@id([ID_GENERO, ID_LIBRO])
+  libro   Libro   @relation(fields: [ID_LIBRO], references: [ID_LIBRO])
 }
 
 model Usuario {
   ID_USUARIO         Int          @id @default(autoincrement())
+  NOMBRE         String 
   CORREO_ELECTRONICO String       @unique       
   CONTRASENA         String       
-  TIPO_USUARIO       String?
   FECHA_CREACION     DateTime     @default(now())
   Comentario         Comentario[]
   Ventas             Ventas[]

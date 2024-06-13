@@ -28,18 +28,19 @@ export async function getUserService(id: number)
 
 export async function updateUserService(
     id: number,
+    nombre: string,
     contrasena: string,
     correo_electronico: string, 
-    tipo_usuario: string,
 ) 
 {
     try {
         const requestedUser = await prisma.usuario.update({
             where: {ID_USUARIO: id},
             data: {
+                NOMBRE: nombre,
                 CONTRASENA: contrasena,
                 CORREO_ELECTRONICO: correo_electronico,
-                TIPO_USUARIO: tipo_usuario
+                
             }
         
         })

@@ -1,13 +1,13 @@
 import { Request, Response, /*response NextFunction */} from "express";
 //import { NextResponse } from 'next/server'
-import { createBookService, getAllBooksService, getBookService, updateBookService, deleteBookService} from "../services/book.service";
+import { createBookService, getAllBooksService, getBookService, getBookByNameService, updateBookService, deleteBookService} from "../services/book.service";
 
 export const createBook = async (req: Request, res: Response) => {
   
-  const { isbn, titulo, autor, editorial, fecha_edicion, calificacion } = req.body;
+  const { isbn, titulo, autor, editorial, fecha_edicion, imageurl, calificacion } = req.body;
 
   try {
-    const response = createBookService(isbn, titulo, autor, editorial, fecha_edicion, calificacion);
+    const response = createBookService(isbn, titulo, autor, editorial, fecha_edicion, imageurl, calificacion);
     res.status(200).json(response);
   } catch (error) {
     
@@ -38,6 +38,20 @@ export const getBook = async ( req: Request, res: Response) => {
 
   } catch (error) {
     console.log(error);
+  }
+}
+
+export const getBookByName = async ( req: Request, res: Response) => {
+  
+  try {
+    const {titulo} = req.body
+    const response = await getBookByNameService(titulo);
+    res.status(200).json(response);
+
+    
+  } catch (error) {
+    res.status(400).json({error: "Error"})
+
   }
 }
 
