@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import './index.css'
+import Cometa from "../../../assets/cometa.png"
+import Buffy from "../../../assets/BuffyCazavampiros.png"
+import MM from "../../../assets/MM.png"
+import RB from "../../../assets/RG.png"
 
 const MenuBook = () => {
 
@@ -7,18 +11,13 @@ const MenuBook = () => {
         <>
             <div id="divInferior">
                 <div id="divInferiorIzquierdo">
-                    <h1 id="h1CategoriaRelacionada">Categorías</h1>
-                    <div id="divCategorias">
-                        <button className="CatogoriasButtons">Romance</button>
-                        <button className="CatogoriasButtons">Historia</button>
-                        <button className="CatogoriasButtons">Filosofía</button>
-                        <button className="CatogoriasButtons">Ficción</button>
-                        <button className="CatogoriasButtons">No Ficción</button>
-                        <button className="CatogoriasButtons">Literatura Infantil</button>
-                        <button className="CatogoriasButtons">Juvenil</button>
-                        <button className="CatogoriasButtons">Poesía</button>
-                        <button className="CatogoriasButtons">Teatro</button>
-                        <button className="CatogoriasButtons">Comics</button>
+                    <h1 id="h1CategoriaRelacionada">Categoría relacionada</h1>
+                    <div id="divRecomendados">
+                        <img className="LibrosRecomendados" style={{ backgroundImage: `url(${Cometa})`}}/>
+                        <img className="LibrosRecomendados" style={{ backgroundImage: `url(${Buffy})`}}/>
+                        <img className="LibrosRecomendados" style={{ backgroundImage: `url(${MM})`}}/>
+                        <img className="LibrosRecomendados" style={{ backgroundImage: `url(${RB})`}}/>
+                        <br></br><br></br><br></br>
                     </div>
                 </div>
                 <div id="divInferiorDerecho">

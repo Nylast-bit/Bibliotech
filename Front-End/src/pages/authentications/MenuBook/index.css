@@ -42,13 +42,32 @@ body{
     width: 65%;
 }
 
-#divCategorias{
-    position: relative;
-    top: 11%;
-    right: 6%;
-    width: 65%;
+#divRecomendados{
     display: flex;
     flex-direction: column;
+    width: 60%;
+    height: 100%;
+    background-color: #00000000;
+    position: relative;
+    top: 6%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+#divRecomendados::-webkit-scrollbar {
+    display: none;
+}
+
+.LibrosRecomendados {
+    position: relative;
+    width: 100%;
+    height: calc(29.028132992327365vh);
+    margin-bottom: 13%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-style: outset;
+    cursor: pointer;
 }
 
 .CatogoriasButtons{
@@ -64,12 +83,6 @@ body{
     transform: scaleY(1.1);
     user-select: none;
     -webkit-user-select: none;
-}
-
-.CatogoriasButtons:active{
-    background-color: #EAEAEA;
-    border-radius: 0.7vh;
-    border-bottom: 0.15vh solid #00000000;
 }
 
 #divInferiorDerecho{
@@ -138,23 +151,6 @@ body{
     border-radius: 4vh;
     border: 0.50vh solid var(--colorBlueBorderBottom);
 }
-
-/*#imgLibro{
-    position: relative;
-    width: calc(23.087159015302728vw * 0.94);
-    height: calc(68.41432225063939vh * 0.94);
-    max-width: calc(23.087159015302728vw * 0.94);
-    max-height: calc(68.41432225063939vh * 0.94);
-    background-repeat: no-repeat;
-    background-image: url('../../../assets/cometa.png');
-    background-color: black;
-    border: none;
-    outline: none;
-    background-size: 100% 100%;
-    outline: none;
-    border: none;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-}*/
 
 #divCirculo_de_Mierda{
     position: relative;
