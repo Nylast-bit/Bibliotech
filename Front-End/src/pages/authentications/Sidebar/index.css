@@ -1,0 +1,53 @@
+#divInferiorIzquierdo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 17.5%;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+#h1Categorias {
+    position: relative;
+    transform: scaleY(1.1);
+    top: 6%;
+    font: 1.7vw 'Oswald';
+    font-weight: bold;
+    color: #1E608E;
+    padding-bottom: 2%;
+    border-bottom: 0.15vh solid var(--colorBlueBorderBottom);
+    width: 65%;
+}
+
+#divCategorias {
+    position: relative;
+    top: 11%;
+    right: 6%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.CatogoriasButtons {
+    background-color: #00000000;
+    outline: none;
+    border: none;
+    color: var(--colorBlueText);
+    border-bottom: 0.15vh solid var(--colorBlueBorderBottom);
+    font: 1.3vw 'Oswald';
+    text-align: left;
+    margin-bottom: 5%;
+    padding: 3%;
+    transform: scaleY(1.1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.CatogoriasButtons:active {
+    background-color: #EAEAEA;
+    border-radius: 0.7vh;
+    border-bottom: 0.15vh solid #00000000;
+}

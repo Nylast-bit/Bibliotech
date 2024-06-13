@@ -1,13 +1,24 @@
-import { useState } from 'react'
-import principito from "../../../assets/principito.png"
-import cometa from "../../../assets/cometa.png"
-import BC from "../../../assets/BuffyCazavampiros.png"
-import MM from "../../../assets/MM.png"
-import RG from "../../../assets/RG.png"
-import PDP from "../../../assets/PDP.png"
+import { useState, useEffect } from 'react'
 import './index.css'
+import { getBooks } from '../../../API/books'
+import BookItem from './item'
 
 const Home = () => {
+
+    const [books, setBooks] = useState<any>();
+
+    useEffect(() => {
+        const fetchBooks = async () => {
+            try {
+                const response = await getBooks();
+                setBooks(response);
+            } catch (error) {
+                console.error("Error fetching books:", error);
+            }
+        };
+
+        fetchBooks();
+    }, []);
 
 
     return (
@@ -30,32 +41,15 @@ const Home = () => {
                 </div>
                 <div id="divInferiorDerecho2">
                     <div id="divContenedor2">
-                        <div className="Libros">
-                            <div className="Images" style={{ backgroundImage: `url(${principito})`}} />
-                            <h1 className="h1LibroNombre">El Prinipito</h1>
-                        </div>
-                        <div className="Libros">
-                            <div className="Images" style={{ backgroundImage: `url(${cometa})`}} />
-                            <h1 className="h1LibroNombre">El Cometa</h1>
-                        </div>
-                        <div className="Libros">
-                            <div className="Images" style={{ backgroundImage: `url(${BC})`}} />
-                            <h1 className="h1LibroNombre">Buffy Cazavampiros</h1>
-                        </div>
-                        <div className="Libros">
-                            <div className="Images" style={{ backgroundImage: `url(${MM})`}} />
-                            <h1 className="h1LibroNombre">Magicos misterios</h1>
-                        </div>
-                        <div className="Libros">
-                            <div className="Images" style={{ backgroundImage: `url(${RG})`}} />
-                            <h1 className="h1LibroNombre">Robot Gigantesco</h1>
-                        </div>
-                        <div className="Libros">
-                            <div className="Images" style={{ backgroundImage: `url(${PDP})`}} />
-                            <h1 className="h1LibroNombre">Policán</h1>
-                        </div>
-                        <br/><br/><br/><br/><br/>
-                        <div style={{height: '70%'}}/>
+                        {books?.map((book: any) => (
+                            <BookItem
+                                key={book.ID_LIBRO}
+                                img={book.IMAGEURL}
+                                title={book.TITULO}
+                            />
+                        ))}
+                        <br /><br /><br /><br /><br />
+                        <div style={{ height: '70%' }} />
                     </div>
                 </div>
             </div>
