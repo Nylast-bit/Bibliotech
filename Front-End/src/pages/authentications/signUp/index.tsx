@@ -114,7 +114,7 @@ function SignUp() {
               <p className="Links" style={{ color: "#D1E9F9" }}>
                 ¿Ya tienes una cuenta?
               </p>
-              <p className="Links" style={{ color: "#1E608E" }}>
+              <p className="Links" style={{ color: "#1E608E", fontWeight: 'bold' }}>
                 Iniciar sesión
               </p>
             </div>

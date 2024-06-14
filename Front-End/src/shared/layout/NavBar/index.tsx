@@ -1,13 +1,50 @@
-import MenuBook from "../../../pages/authentications/MenuBook";
-import Home from "../../../pages/authentications/Home"
 import { Outlet, Link } from "react-router-dom";
 import CarritoCompras from '../../../assets/CarritoCompras.png'
 import Lupa from '../../../assets/lupa.png'
 import './index.css'
-import { Script } from "vm";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+function SoloLetras(event: { key: string; target: { value: string } }) {
+
+    const soloLetrasRegex = /^[A-Za-z\s]+$/;
+
+    if (!soloLetrasRegex.test(event.key))
+    {
+        event.preventDefault();
+    }
+};
 
 const Navbar = () => {
+
+    useEffect(() => {
+
+        var ClickedItem: string | null = null;
+
+        document.body.addEventListener('click', function (){
+            
+            const Menu = document.getElementById('MenuEmergente');
+            
+            if (Menu && ClickedItem !== "btnSettings")
+            {
+                    Menu.style.display = 'none';
+            }
+
+            ClickedItem = null;
+        });
+
+        document.getElementById('btnSetings')?.addEventListener('click', function (){
+
+            const Menu = document.getElementById('MenuEmergente');
+                        
+                if (Menu)
+                {
+                    Menu.style.display = 'block';
+
+                    ClickedItem = "btnSettings";
+                }
+        });
+    }, []);
+
 
     return (
         <>
@@ -16,11 +53,10 @@ const Navbar = () => {
                     <img id="imgBarraSuperiorCarrito" src={CarritoCompras} />
                     <h1 id="h1Bibliotech">BiblioTech</h1>
                     <div id="divBarraBusqueda">
-                        <input id="textBusqueda" type='text' placeholder="Buscar..." />
+                        <input id="textBusqueda" type='text' placeholder="Buscar..."  onKeyDown={SoloLetras}/>
                         <input id="buttonBusqueda" src={Lupa} type='button' />
                     </div>
                     <button id="btnSetings">
-                        {/*si quieren que se vea este menu vayan a #MenuEmergente del css y quitenle el visibility: hidden ya asi se dan una idea de como mostrarlo cuando lo presionen*/}
                         <div id="MenuEmergente">
                             <div className="divMenuItem">
                                 <svg className="svgs" xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">

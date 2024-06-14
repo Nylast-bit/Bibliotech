@@ -44,7 +44,7 @@ body{
 
 #h1Bibliotech{
     position: absolute;
-    top: -12%;
+    top: -21%;
     left: 9%;
     transform: scaleY(1.1);
     font: 1.9vw 'Oswald';
@@ -80,12 +80,14 @@ body{
     background-color: #00000000;
     padding-left: 1.5%;
     font: 0.9vw 'Oswald MS';
+    font-family: "Oswald", sans-serif;
     outline: none;
     border: none;
 }
 
 #textBusqueda::placeholder{
     color: #D1E9F9;
+    font-family: "Oswald", sans-serif;
 }
 
 #buttonBusqueda{
@@ -132,7 +134,7 @@ body{
     box-shadow: 0.2557544757033248vh 0.2557544757033248vh 0.2557544757033248vh 0.1278772378516624vh rgba(0, 0, 0, 0.2);
     cursor: none;
     overflow: hidden;
-    visibility: hidden;
+    display: none;
 }
 
 .divMenuItem{

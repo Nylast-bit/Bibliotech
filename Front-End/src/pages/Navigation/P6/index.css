@@ -1,0 +1,194 @@
+:root{
+    --colorBlueText: #1E608E;
+    --colorBlueBorderBottom: #2C94DD;
+}
+
+body{
+    background-color: #00000000;
+}
+
+#divInferior{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 92.8%;
+    background-color: #00000000;
+    margin-top: 3.5%;
+}
+
+#divInferiorIzquierdo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 17.5%;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+#h1Categorias{
+    position: relative;
+    transform: scaleY(1.1);
+    top: 6%;
+    font: 1.7vw 'Oswald';
+    font-weight: bold;
+    color: #1E608E;
+    padding-bottom: 2%;
+    border-bottom: 0.15vh solid var(--colorBlueBorderBottom);
+    width: 65%;
+}
+
+#divCategorias{
+    position: relative;
+    top: 11%;
+    right: 6%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.CatogoriasButtons{
+    background-color: #00000000;
+    outline: none;
+    border: none;
+    color: var(--colorBlueText);
+    border-bottom: 0.15vh solid var(--colorBlueBorderBottom);
+    font: 1.3vw 'Oswald';
+    text-align: left;
+    margin-bottom: 5%;
+    padding: 3%;
+    transform: scaleY(1.1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.CatogoriasButtons:active{
+    background-color: #EAEAEA;
+    border-radius: 0.7vh;
+    border-bottom: 0.15vh solid #00000000;
+}
+
+#divInferiorDerecho{
+    background-color: #DEF1FF;
+    position: relative;
+    width: 82.5%;
+    height: 100%;
+    padding-left: 7.5%;
+    padding-top: 4%;
+}
+
+#divFormulario{
+    position: relative;
+    right: 6%;
+    bottom: 7.3%;
+    padding-top: 0.5%;
+    background-color: #FFFFFF;
+    width: calc(82.23552894211576vw * 0.72);
+    height: calc(106.52173913043478vh * 0.72);
+    text-align: left;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4vh;
+    border: 0.50vh solid var(--colorBlueBorderBottom);
+    justify-content: center;
+    align-items: center;
+}
+
+#divCirculoAzul{
+    position: relative;
+    width: calc(33.13373253493014vw * 0.72);
+    height: calc(65.47314578005115vh * 0.72);
+    background-color: #136CAA;
+    border-radius: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 2%;
+}
+
+#ImagenLibro{
+    width: calc(26.54690618762475vw * 0.72);
+    height: calc(74.16879795396419vh * 0.72);
+    background-color: #F9F9F9;
+    border: 0.20vh solid var(--colorBlueBorderBottom);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*Si quiere que se deje de ajustar la foto al contenedor descomentar esto y cometar la linea que se encuentra arriba de esta
+    background-size: contain;
+    background-position: center;*/
+    font-size: calc(7.672634271099744vh * 0.30);
+}
+
+#divCampos{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    position: relative;
+    bottom: 2%;
+    padding-left: 9%;
+    padding-top: 14%;
+}
+
+.campos{
+    background-color: #7CB5DD;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 0.5vh;
+    width: calc(16.367265469061877vw * 0.73);
+    height: calc(5.754475703324808vh * 0.73);
+    align-items: center;
+    text-align: left;
+    margin: 0;
+    margin-bottom: calc(1.680306905370843936vh * 1.1);
+    padding: 0;
+    padding-left: 0.2389620758483034042vw;
+    font-family: "Oswald", sans-serif;
+    font-size: calc(7.672634271099744vh * 0.30);
+}
+
+.campos::placeholder{
+    color: #FFFFFF;
+}
+
+#DescripciónLibro{
+    width: calc(22.62142381902861vw * 0.73);
+    height: calc(24.808184143222505vh * 0.72);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    resize: none;
+}
+
+#divCamposButtons{
+    display: flex;
+    flex-direction: row;
+    height: 16%;
+    width: 91%;
+    position: relative;
+    right: 20%;
+}
+
+#divCamposButtons > *{
+    width: calc(13.572854291417165vw * 0.73);
+    height: calc(8.823529411764707vh * 0.73);
+    border: none;
+    outline: none;
+    border-radius: 0.5vh;
+    font-size: calc(7.672634271099744vh * 0.30);
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 1%;
+    margin-right: 6%;
+    margin-top: 2%;
+    cursor: pointer;
+}
