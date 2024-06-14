@@ -74,6 +74,7 @@ body {
 .Links {
     margin-right: 2%;
     font: 1.2em 'Oswald MS';
+    font-family: "Oswald", sans-serif;
     outline: none;
     text-decoration: none;
 }
@@ -125,35 +126,13 @@ body {
     right: 8.5%;
     margin: 2%;
     font: 2em 'Oswald MS';
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #D1E9F9;
 }
 
 #Name {
     margin-right: 7%;
-}
-
-.Name_y_Username {
-    height: 62.5%;
-    width: 38%;
-    position: relative;
-    right: 3%;
-    border-radius: 6px;
-    outline: none;
-    border: 2px solid #00000000;
-    background-color: #7CB5DD;
-    color: #D1E9F9;
-    padding-left: 2%;
-    font: 1em 'Oswald MS';
-    margin-bottom: 6%;
-    padding-bottom: 2%;
-}
-
-.Name_y_Username:focus {
-    border: 2px solid #164C71;
-}
-
-.Name_y_Username::placeholder {
-    color: #D1E9F9;
-    font: 1em 'Oswald MS';
 }
 
 .Email_y_Password {
@@ -168,6 +147,7 @@ body {
     color: #D1E9F9;
     padding-left: 2%;
     font: 1em 'Oswald MS';
+    font-family: "Oswald", sans-serif;
     margin-bottom: 6%;
     padding-bottom: 2%;
 }
@@ -179,6 +159,7 @@ body {
 .Email_y_Password::placeholder {
     color: #D1E9F9;
     font: 1em 'Oswald MS';
+    font-family: "Oswald", sans-serif;
 }
 
 #OjitoEscondido {
@@ -197,6 +178,8 @@ body {
     background-color: #59BBFF;
     color: #D1E9F9;
     font: 1em 'Oswald MS';
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     margin-bottom: 6%;
     margin-top: 2%;
     padding-bottom: 2%;

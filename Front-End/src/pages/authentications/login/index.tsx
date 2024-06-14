@@ -44,7 +44,7 @@ function LogIn() {
                         response.userData.NOMBRE.slice(1).toLowerCase()
                         }!`
                     );
-                    navigate("/home");
+                    navigate("../Navigation/home");
                 } else {
                     dispatch(loginFailure());
                     toast.error("Incorrect credentials. Try again.");
@@ -109,6 +109,7 @@ function LogIn() {
                                     height: "40%",
                                     maxHeight: "40%",
                                     font: "1em Oswald MS",
+                                    fontFamily: "'Oswald', sans-serif",
                                     color: "#D1E9F9",
                                     left: "-5%",
                                 }}
@@ -134,7 +135,7 @@ function LogIn() {
                             <a
                                 href="https://www.youtube.com"
                                 className="Links1"
-                                style={{ color: "#1E608E" }}
+                                style={{ color: "#1E608E", fontWeight: 'bold' }}
                             >
                                 Crear cuenta
                             </a>

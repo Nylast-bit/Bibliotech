@@ -73,6 +73,7 @@ body {
 .Links1 {
     margin-right: 2%;
     font: 1.2em 'Oswald MS';
+    font-family: "Oswald", sans-serif;
     outline: none;
     text-decoration: none;
 }
@@ -121,14 +122,18 @@ body {
 
 #h1Welcomeback {
     position: relative;
-    right: 8.5%;
+    right: 5.9%;
     margin: 2%;
-    font: 2em 'Oswald MS';
+    font: 2em;
+    font-family: "Oswald", sans-serif;
 }
 
 #h4RemenberMe {
     position: relative;
-    font: 0.85em 'Oswald MS';
+    font: 0.85em "Oswald MS";
+    font-family: "Oswald", sans-serif;
+    /*color: #FFFFFF;*/
+    color: #000000;
 }
 
 .Username_y_Password {
@@ -142,7 +147,8 @@ body {
     background-color: #7CB5DD;
     color: #D1E9F9;
     padding-left: 2%;
-    font: 1em 'Oswald MS';
+    font: 1em;
+    font-family: "Oswald", sans-serif;
     margin-bottom: 6%;
     padding-bottom: 2%;
 }
@@ -153,7 +159,8 @@ body {
 
 .Username_y_Password::placeholder {
     color: #D1E9F9;
-    font: 1em 'Oswald MS';
+    font: 1em;
+    font-family: "Oswald", sans-serif;
 }
 
 #LogIn {
@@ -165,10 +172,12 @@ body {
     border: none;
     background-color: #59BBFF;
     color: #D1E9F9;
-    font: 1em 'Oswald MS';
+    font: 1em 'Oswald';
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     margin-bottom: 6%;
     margin-top: 2%;
-    padding-bottom: 2%;
+    /*padding-bottom: 2%;*/
     cursor: pointer;
 }
 
